@@ -312,8 +312,9 @@
             let selectedState = domState.options[domState.selectedIndex].value;
             let selectedCity = domCity.options[domCity.selectedIndex].value;
 
-            if ((currentHref.pathname === '/' || currentHref.pathname == '/index.html') && selectedState !== 'SelectState') {
-                let newUrl = `${currentHref.origin}/result.html?state=${selectedCity}&city=${selectedState}`
+            if ((currentHref.pathname === '/' || currentHref.pathname == '/index.html' || currentHref.pathname == '/newCost/' ) && selectedState !== 'SelectState') {
+                // let newUrl = `${currentHref.origin}/result.html?state=${selectedCity}&city=${selectedState}`
+                let newUrl = `${currentHref.origin}/newCost/result.html?state=${selectedCity}&city=${selectedState}`
 
                 window.location.href = newUrl
             }
