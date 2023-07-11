@@ -1306,8 +1306,12 @@ table.blueTable thead th:first-child {
 }
 
 
+.r_b_two {
+    display: flex;
+    gap: 5px;
+}
 
-/* input[type="radio"] {
+ .r_b_two input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1319,11 +1323,11 @@ table.blueTable thead th:first-child {
     background-color: white;
 }
 
-input[type="radio"]:checked {
+.r_b_two input:checked {
     background-color: yellow;
 }
 
-input[type="radio"]:checked::before {
+.r_b_two input:checked::before {
     content: "";
     display: block;
     width: 6px;
@@ -1331,13 +1335,14 @@ input[type="radio"]:checked::before {
     background-color: black;
     border-radius: 50%;
     margin: 4px auto;
-}
-.radio-buttons {
-    display: flex;
-    gap: 5px;
+} 
+.new-radio-container{
+    font-size: 14px !important;
+    color: #000;
+    font-weight: bold;
 }
 
-input[type=checkbox], input[type=radio] {
+/* input[type=checkbox], input[type=radio] {
     box-sizing: border-box;
     padding: 0;
-} */
+}  */
