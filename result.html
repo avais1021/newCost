@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ultratech Cost calculator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/style-result.css" />
+</head>
+
+<body>
+    <section class="pb-4">
+        <div class="container">
+            <div class="row border-0 cost-calculator">
+                <h2 class="heading py-4 ">
+                    Find Out How Much Your Home-building Project Will Cost
+                </h2>
+                <div class="mob-visibility">
+                    <h2 class="heading">
+                        Cost Calculator
+                    </h2>
+                    <p class="sub-text">Calculate the estimated cost of construction in your location</p>
+
+                </div>
+            </div>
+            <div class="row border-0 calculator">
+                <div class="col-md-3 select-field">
+                    <label for="State" style="color: #777777;">Select State</label>
+                    <select class="form-select" id="inputState" name="state">
+                        <option value="SelectState">Select State</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madya Pradesh">Madya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Orissa">Orissa</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttaranchal">Uttaranchal</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadeep">Lakshadeep</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                    </select>
+
+                    </optgroup>
+                </div>
+
+                <div class="col-md-3  select-field">
+                    <label for="inputCity" style="color: #777777;">Select City</label>
+                    <select id="inputCity" name="city" class="form-select">
+                        <!-- <optgroup label="Swedish Cars"> -->
+                        <option value="">Select City </option>
+                    </select>
+
+                    </optgroup>
+                </div>
+                <div class="col-md-2 col-6  select-field 0padding">
+                    <label for="area" style="color: #777777;">Area</label>
+                    <input class="form-select-input" type="text" id="area" name="area" placeholder="1000">
+                </div>
+                <div class="col-md-1 col-6 " style="margin-top: 40px;margin-left: 0px;">
+                    <div class="radio-buttons">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label class="radio-container"> sq.m</label>
+                    </div>
+
+                    <div class="radio-buttons">
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label class="radio-container">sq.feet</label>
+                    </div>
+                </div>
+                <!-- <div class="col-md-1 col-6 radio-btn" style="margin-top: 50px;">
+                    <label class="radio-container">sq.feet
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">sq.m
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+
+                </div> -->
+                <div class="col-md-2 mt-4 mr-2 reset">
+                    <a href="#" class="reset-btn"> <span>Reset</span>
+                        <img src="./assets/images/Path.png"></button></a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="estimate mob-visibility">
+        <div class="container">
+            <div class="estimate-1">
+                <p>Cost Per Sq.Ft Of House Construction</p>
+                <p>₹1,451</p>
+            </div>
+            <div>
+                <p>Total Estimated Cost of Construction</p>
+                <p>62,92,325</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- donut -->
+    <section class="chart-container">
+        <div class="timeline d-flext justify-content-center text-center">
+            <h2 class="cost px-4" style="margin: 40px 0px; ">Construction Cost Breakdown (INR %)</h2>
+        </div>
+        <div id="chartContainerDesktop">
+        </div>
+        <div id="chartContainerMob"></div>
+        <div id="overlay"></div>
+    </section>
+
+
+    <!-- Sticky banner -->
+    <section class="desk-visibility">
+        <div class="sticky-line">
+            <h3 class="m-0">Cost Per Sq.Ft Of House Construction</h3>
+            <h3 class="m-0">₹1,451</h3>
+            <h3 class="m-0">Total Estimated Cost of Construction</h3>
+            <h3 class="m-0">₹62,92,325</h3>
+        </div>
+    </section>
+
+    <section class="mob-visibility">
+        <div class="sticky-line-mob">
+
+            <h3 class="m-0 pb-2">Total Estimated Cost of Construction</h3>
+            <h3 class="m-0">₹62,92,325</h3>
+        </div>
+    </section>
+
+
+
+    <section class="donutpoint mob-visibility">
+        <div style="width: 100%;">
+            <div id="donutMobileViewTable">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HORIZONTAL GRAPH -->
+
+    <section id="horizontal-graph" class="desk-visibility">
+        <div class="container">
+            <div class="timeline d-flext justify-content-center text-center">
+                <h2 class="cost">Timeline Tracking: Cost Per Phase (INR %)</h2>
+            </div>
+            <div class="horizontal-chart">
+                <canvas id="myBarChart"></canvas>
+            </div>
+            <div class="timeline d-flext justify-content-center text-center">
+                <h2 class="cost pt-4" style="font-size: 14px;">Timeframe(days)</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="vertical-graph" class="mob-visibility">
+        <div class="container">
+            <div class="timeline d-flext justify-content-center text-center">
+                <h2 class="cost">Timeline Tracking: Cost Per Phase (INR %)</h2>
+            </div>
+            <div class="mobile-view-horizontal-chart">
+                <div class="horizontal-chart" style="width:700px">
+                    <canvas id="myfloatingchart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mobile-view-floating-chart-clickedData" id="mobile-view-floating-chart-clickedData">
+    </div>
+
+    <!-- TABLE DESKTOP -->
+
+    <section class="desk-visibility">
+        <div class="container ">
+            <div class=" d-flext justify-content-center text-center py-5">
+                <h2 class="cost"> Cost by Resource Allocation</h2>
+            </div>
+            <div class="table-div">
+                <!-- head -->
+                <div class="row heading-tab">
+                    <div class="col-3 resource">
+                        Resource
+                    </div>
+                    <div class="col-2 text-center quality-no">Quantity</div>
+                    <div class="col-5 text-center quantity-no quality ">Quality</div>
+                    <div class="col-2 text-center amount-no amount">Amount</div>
+
+                </div>
+                <!-- cement -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/cement.png" alt="" width="48px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Cement</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">2250 <sub>Bags</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4">
+                                <label class="radio-container">
+                                    <input type="radio" id="cement1" name="cement" value="cement1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">UltraTech Super</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="cement2" name="cement" value="cement2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">UltraTech WeatherPlus</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="cement3" name="cement" value="cement3 ">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Normal PPC/PSC</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹8,59,500</div>
+
+                </div>
+                <!-- steel -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/steel.png" alt="" width="38px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Steel</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">17500 <sub>Kg</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="steel1" name="steel" value="steel1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="steel2" name="steel" value="steel2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="steel3" name="steel" value="steel3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹7,87,500</div>
+
+                </div>
+                <!-- bricks -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/bricks.png" alt="" width="40px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Bricks</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="bricks1" name="bricks" value="bricks1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="bricks2" name="bricks" value="bricks2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="bricks3" name="bricks" value="bricks3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- aggregate -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/aggregate.png" alt="" width="40px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Aggregate</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="aggregate1" name="aggregate" value="aggregate1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="aggregate2" name="aggregate" value="aggregate2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="aggregate3" name="aggregate" value="aggregate3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- sand -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/sand.png" alt="" width="40px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Sand</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no ">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="sand1" name="sand" value="sand1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="sand2" name="sand" value="sand2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="sand3" name="sand" value="sand3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- flooring -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/flooring.png" alt="" width="40px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Flooring</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="flooring1" name="flooring" value="flooring1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="flooring2" name="flooring" value="flooring2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="flooring3" name="flooring" value="flooring3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- windows -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/windows.png" alt="" width="40px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Windows</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="windows1" name="windows" value="windows1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="windows2" name="windows" value="windows2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="windows3" name="windows" value="windows3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- door -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/door.png" alt="" width="35px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Door</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="door1" name="door" value="door1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="door2" name="door" value="door2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="door3" name="door" value="door3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- electric -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/electric.png" alt="" width="28px" height="49px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Electrical Fitting</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="electric1" name="electric" value="electric1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="electric2" name="electric" value="electric2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="electric3" name="electric" value="electric3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- painting -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/paint.png" alt="" width="40px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Painting</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="paint1" name="paint" value="paint1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="paint2" name="paint" value="paint2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="paint3" name="paint" value="paint3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- sanita -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/sanitary.png" alt="" width="40px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Sanitary Fitting</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="sanitary1" name="sanitary" value="sanitary1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="sanitary2" name="sanitary" value="sanitary2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="sanitary3" name="sanitary" value="sanitary3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- kitchen work -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/kitchen.png" alt="" width="40px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px;">
+                            Kitchen Work</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="kitchen1" name="kitchen" value="kitchen1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="kitchen2" name="kitchen" value="kitchen2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="kitchen3" name="kitchen" value="kitchen3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <!-- contractor -->
+                <div class="row">
+                    <div class="col-3 resource">
+                        <img src="assets/images/contractor.png" alt="" width="32px" height="40px"> <span
+                            style="padding-left: 10px; font-size: 24px; ">
+                            Contractor</span>
+                    </div>
+
+                    <div class="col-2 text-center quality-no">95000 <sub>per pc</sub></div>
+                    <div class="col-5 quantity-no">
+                        <div class="row border-0">
+
+
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="contarcter1" name="radio" value="contarcter1">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age1" class="label">Basic</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="contarcter2" name="radio" value="contarcter2">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age2" class="label">Medium</label>
+                            </div>
+                            <div class="col-4"> <label class="radio-container">
+                                    <input type="radio" id="contractor3" name="radio" value="contractor3">
+                                    <span class="checkmark"></span>
+                                </label><br>
+                                <label for="age3" class="label">Premium</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center amount-no">₹4,75,500</div>
+
+                </div>
+                <div class="table-button">
+                    <div class="buttons">
+                        <button class="print">
+                            <img src="assets/images/butn1.png" alt=""> Print Final Estimate
+                        </button>
+                        <button class="share"><img src="assets/images/butn2.png" alt="">Share Final Estimate </button>
+                    </div>
+
+                    <div>
+                        <p class=" disclaimer">Disclaimer: The costs indicated are approximate costs for each resource.
+                            Actual cost estimates may vary for your city. Please check with your contractor or visit our
+                            nearest UBS store for a custom cost estimate as per your requirement. This amount is an
+                            approximate amount for construction area & it does not include compound wall area.*Available
+                            at UltraTech Building Solutions outlets**The default quality is set to medium. You can
+                            change this by clicking the arrow buttons.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- TABLE MOBILE VIEW -->
+    <section class="mob-visibility">
+        <div class="container">
+            <div class=" py-2">
+                <h2 class="cost" style="padding-left: 15px;"> Cost by Resource Allocation</h2>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                            onclick="toggle(this)">
+                            <img src="assets/images/cement.png" alt="" class="accordion-img">&nbsp;&nbsp; <span
+                                class="accordion-name">Cement</span>
+                            <span class="accordion-price"> &nbsp;| ₹1,05,600</span>
+                        </button>
+
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Cement Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="cement1" name="cement" value="cement1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">UltraTech Super</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="cement2" name="cement" value="cement2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">UltraTech WeatherPlus</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="cement3" name="cement" value="cement3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Normal PPC/PSC</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>2250</b> <sub>Bags</sub></p>
+                                <p> <b> ₹8,59,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                            onclick="toggle(this)">
+                            <img src="assets/images/steel.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Steel </span>
+                            <span class="accordion-price">&nbsp;| ₹1,05,600</span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Steel Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="steel1" name="steel" value="steel1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="steel2" name="steel" value="steel2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="steel3" name="steel" value="steel3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>17500</b> <sub>Bags</sub></p>
+                                <p> <b> ₹7,87,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree" onclick="toggle(this)">
+                            <img src="assets/images/paint.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Painting System </span>
+                            <span class="accordion-price">&nbsp; | ₹24,05,500</span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Painting Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="paint1" name="paint" value="paint1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="paint2" name="paint" value="paint2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="paint3" name="paint" value="paint3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour" onclick="toggle(this)">
+                            <img src="assets/images/bricks.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Bricks </span>
+                            <span class="accordion-price">&nbsp; | ₹3,05,750 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Bricks Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="bricks1" name="bricks" value="bricks1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="bricks2" name="bricks" value="bricks2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="bricks3" name="bricks" value="bricks3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive" onclick="toggle(this)">
+                            <img src="assets/images/aggregate.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Aggregate </span>
+                            <span class="accordion-price">&nbsp; | ₹63,20,000 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Aggregate Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="aggregate1" name="aggregate" value="aggregate1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="aggregate2" name="aggregate" value="aggregate2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="aggregate3" name="aggregate" value="aggregate3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix"
+                            onclick="toggle(this)">
+                            <img src="assets/images/sand.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Sand </span>
+                            <span class="accordion-price">&nbsp; | ₹1,15,500 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Sand Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="sand1" name="sand" value="sand1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="sand2" name="snad" value="sand2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="sand3" name="sand" value="sand3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                            aria-controls="flush-collapseSeven" onclick="toggle(this)">
+                            <img src="assets/images/flooring.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Flooring </span>
+                            <span class="accordion-price">&nbsp;| ₹2,14,600 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Flooring Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="flooring1" name="flooring" value="flooring1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="flooring2" name="flooring" value="flooring2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="flooring3" name="flooring" value="flooring3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseEight" aria-expanded="false"
+                            aria-controls="flush-collapseEight" onclick="toggle(this)">
+                            <img src="assets/images/windows.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Windows </span>
+                            <span class="accordion-price">&nbsp; | ₹3,75,500 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseEight" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Windows Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="windows1" name="windows" value="windows1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="windows2" name="windows" value="windows2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="windows3" name="windows" value="windows3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseNine" aria-expanded="false"
+                            aria-controls="flush-collapseNine" onclick="toggle(this)">
+                            <img src="assets/images/door.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Doors </span>
+                            <span class="accordion-price">&nbsp;| ₹11,83,250 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Door Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="door1" name="door" value="door1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="door2" name="door" value="door2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="door3" name="door" value="door3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen"
+                            onclick="toggle(this)">
+                            <img src="assets/images/electric.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Electrical Fittings </span>
+                            <span class="accordion-price">&nbsp;| ₹9,45,300 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Electrical Fitting Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="electric1" name="electric" value="electric1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="electric2" name="electric" value="electric2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="electric3" name="electric" value="electric3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingEleven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseEleven" aria-expanded="false"
+                            aria-controls="flush-collapseEleven" onclick="toggle(this)">
+                            <img src="assets/images/paint.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Painting </span>
+                            <span class="accordion-price">&nbsp;| ₹31,54,800 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseEleven" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Painting Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="painting1" name="painting" value="painting1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="painting2" name="painting" value="painting2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="painting3" name="painting" value="painting3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwelve">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwelve" aria-expanded="false"
+                            aria-controls="flush-collapseTwelve" onclick="toggle(this)">
+                            <img src="assets/images/sanitary.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Sanitary Fittings </span>
+                            <span class="accordion-price">&nbsp; | ₹1,05,850 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwelve" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Sanitary Fitting Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="sanitary1" name="sanitary" value="sanitary1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="sanitary2" name="sanitary" value="sanitary2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="sanitary3" name="sanitary" value="sanitary3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThirteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThirteen" aria-expanded="false"
+                            aria-controls="flush-collapseThirteen" onclick="toggle(this)">
+                            <img src="assets/images/kitchen.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Kitchen Work </span>
+                            <span class="accordion-price">&nbsp; | ₹8,62,000 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThirteen" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Kitchen Work Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="kitchen1" name="kitchen" value="kitchen1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="kitchen2" name="kitchen" value="kitchen2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="kitchen3" name="kitchen" value="kitchen3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFourteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFourteen" aria-expanded="false"
+                            aria-controls="flush-collapseFourteen" onclick="toggle(this)">
+                            <img src="assets/images/contractor.png" alt="" class="accordion-img">&nbsp;&nbsp;<span
+                                class="accordion-name">Contractor </span>
+                            <span class="accordion-price">&nbsp; | ₹14,36,800 </span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFourteen" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p style="font-size: 16px; color:#777777;">Select Contractor Grade</p>
+                            <div class="py-2">
+                                <label class="radio-container">
+                                    <input type="radio" id="contarcter1" name="contractor" value="contarcter1">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Basic</span>
+                                </label>
+
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="contarcter2" name="Contractor" value="contarcter2">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Medium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2"><label class="radio-container">
+                                    <input type="radio" id="contractor3" name="contractor" value="contractor3">
+                                    <span class="checkmark"></span>
+                                    <span class="label-dp">Premium</span>
+                                </label>
+
+                            </div>
+                            <div class="py-2" style="display: flex; gap: 25px; ">
+                                <p> <b>95000</b> <sub>Bags</sub></p>
+                                <p> <b> ₹4,75,500</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="table-button">
+                    <div class="buttons">
+                        <button class="print">
+                            <img src="assets/images/butn1.png" alt=""> Print Final Estimate
+                        </button>
+                        <button class="share"><img src="assets/images/butn2.png" alt="">Share Final Estimate </button>
+                    </div>
+
+                    <div>
+                        <p class=" disclaimer">Disclaimer: The costs indicated are approximate costs for each resource.
+                            Actual cost estimates may vary for your city. Please check with your contractor or visit our
+                            nearest UBS store for a custom cost estimate as per your requirement. This amount is an
+                            approximate amount for construction area & it does not include compound wall area.*Available
+                            at UltraTech Building Solutions outlets**The default quality is set to medium. You can
+                            change this by clicking the arrow buttons.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- RELATED BLOGS -->
+    <section class="blog-new ">
+        <div class="container">
+            <div class="row border-0">
+                <h2>
+                    Related Blog
+                </h2>
+            </div>
+            <div class="row border-0 blog-custom-row">
+                <div class="col-md-4">
+                    <div class="card blog-card">
+                        <img src="./assets/images/card1.png" class="card-img-top" alt="..." height="275px">
+                        <div class="card-body">
+                            <div class="card-body-items">
+                                <div class="card-body-content">
+
+                                    <h5 class="card-title">Guide To Estimate For Your Home</h5>
+                                    <p class="card-text">It's important to know the costs of building a home before
+                                        construction. This covers the stages of construction...</p>
+                                </div>
+
+                                <div class="readmore">
+                                    <a href=""> <img src="assets/images/Path.png" alt=""></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card blog-card">
+                        <img src="./assets/images/card2.png" class="card-img-top" alt="..." height="275px">
+                        <div class="card-body">
+                            <div class="card-body-items">
+                                <div class="card-body-content">
+
+                                    <h5 class="card-title">How To Reduce <br>Construction Cost While Building Home</h5>
+                                    <p class="card-text">You will spend a substantial part of your...</p>
+                                </div>
+
+                                <div class="readmore">
+                                    <a href=""> <img src="assets/images/Path.png" alt=""></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card blog-card">
+                        <img src="./assets/images/card3.png" class="card-img-top" alt="..." height="275px">
+                        <div class="card-body">
+                            <div class="card-body-items">
+                                <div class="card-body-content">
+
+                                    <h5 class="card-title">Are You Financially Ready To Build A Home?</h5>
+                                    <p class="card-text">When it comes to building a home, everything boils down to
+                                        finances. To get your finances right, you need to...</p>
+                                </div>
+
+                                <div class="readmore">
+                                    <a href=""> <img src="assets/images/Path.png" alt=""></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- RELATED TOOLS -->
+    <section id="Related-tool" class="desk-visibility">
+        <div class="container">
+            <div class="row border-0">
+                <h2>
+                    Related Tools
+                </h2>
+            </div>
+            <div class="row border-0 blog-custom-row">
+                <div class="col-md-4">
+                    <div class="card tool-card">
+
+                        <div class="card-body">
+                            <div class="card-body-items">
+                                <div class="card-body-content">
+
+                                    <img src="assets/images/Icon.png" alt="">
+                                    <h3 class="tool-h3"> <b>EMI Calculator</b> </h3>
+                                    <p class="para-text">Planning to take a loan? Get an estimate of your EMIs with the
+                                        help of our EMI calculator</p>
+
+                                </div>
+
+                                <div class="readmore">
+                                    <a href=""> <img src="assets/images/Path.png" alt=""></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card tool-card">
+
+                        <div class="card-body">
+                            <div class="card-body-items">
+                                <div class="card-body-content">
+
+                                    <img src="assets/images/icon2.png" alt="">
+                                    <h3 class="tool-h3"> <b>Product Find</b> </h3>
+                                    <p class="para-text">Find the right product for each of your construction needs</p>
+
+                                </div>
+
+                                <div class="readmore">
+                                    <a href=""> <img src="assets/images/Path.png" alt=""></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card tool-card">
+
+                        <div class="card-body">
+                            <div class="card-body-items">
+                                <div class="card-body-content">
+
+                                    <img src="assets/images/Icon (2).png" alt="">
+                                    <h3 class="tool-h3"> <b>Store Locator</b> </h3>
+                                    <p class="para-text">Get in touch with the nearest UltraTech Building Solutions
+                                        store!</p>
+
+                                </div>
+
+                                <div class="readmore">
+                                    <a href=""> <img src="assets/images/Path.png" alt=""></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RELATED TOOLS MOBILE -->
+
+    <section class="mob-visibility">
+        <div class="container">
+            <div class="row border-0">
+                <h2 style="font-family: Avenir Next-bold;" class="py-4">
+                    Related Tools
+                </h2>
+            </div>
+            <div class="row border-0 blog-custom-row">
+                <div class="col-md-4">
+                    <div class="card tool-card">
+
+                        <div class="card-body">
+                            <div class="card-body-items">
+                                <div class="card-body-content">
+
+                                    <img src="assets/images/Icon.png" alt="">
+                                    <h3 class="tool-h3"> <b>EMI Calculator</b> </h3>
+                                    <p class="para-text">Planning to take a loan? Get an estimate of your EMIs with the
+                                        help of our EMI calculator</p>
+
+                                </div>
+
+                                <div class="readmore">
+                                    <a href=""> <img src="assets/images/Path.png" alt=""></a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card tool-card">
+
+                        <div class="card-body">
+                            <div class="card-body-items">
+                                <div class="card-body-content">
+
+                                    <img src="assets/images/icon2.png" alt="">
+                                    <h3 class="tool-h3"> <b>Product Find</b> </h3>
+                                    <p class="para-text">Find the right product for each of your construction needs</p>
+
+                                </div>
+
+                                <div class="readmore">
+                                    <a href=""> <img src="assets/images/Path.png" alt=""></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card tool-card">
+
+                        <div class="card-body">
+                            <div class="card-body-items">
+                                <div class="card-body-content">
+
+                                    <img src="assets/images/Icon (2).png" alt="">
+                                    <h3 class="tool-h3"> <b>Store Locator</b> </h3>
+                                    <p class="para-text">Get in touch with the nearest UltraTech Building Solutions
+                                        store!</p>
+
+                                </div>
+
+                                <div class="readmore">
+                                    <a href=""> <img src="assets/images/Path.png" alt=""></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script>
+
+        function toggle(element) {
+            if (!element.firstElementChild.classList.contains('toggle-img')) {
+                const stack = document.querySelectorAll('.accordion-img')
+                stack.forEach((item) => item.classList.remove('toggle-img'))
+                const stack1 = document.querySelectorAll('.accordion-price')
+                stack1.forEach((item) => item.classList.remove('toggle-price'))
+            }
+            element.firstElementChild.classList.toggle('toggle-img')
+            element.lastElementChild.classList.toggle('toggle-price')
+        }
+
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="./city.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script type="module" src="./barChart/barChartData.js"></script>
+    <!-- <script type="module" src="./donutChartData.js"></script> -->
+    <script type="module" src="./donutChart/donut.js"></script>
+    <script type="module" src="./barChart/chart.js"></script>
+    <script type="module" src="./barChart/vertical.js"></script>
+    <!-- <script>
+        let params = new URLSearchParams(window.location.search)
+        let state = params.get('state');
+        let city = params.get('city');
+        let domState = document.getElementById('inputState');
+        let domStateOptions = Array.from(domState.options)
+        let stateIndex = domStateOptions.findIndex(item => item.value === state)
+        domState.selectedIndex = stateIndex
+        console.log(state, city, domState, stateIndex)
+    </script> -->
+
+
+</body>
+
+</html>

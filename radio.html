@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="radio"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid black;
+            outline: none;
+            background-color: white;
+        }
+
+        input[type="radio"]:checked {
+            background-color: yellow;
+        }
+
+        input[type="radio"]:checked::before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 3px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <p>age</p>
+    <label for="">18 YEARS</label>
+    <input type="radio" name="" id="">
+    <label for="">18 YEARS</label>
+    <input type="radio" name="" id="">
+
+</body>
+
+</html>

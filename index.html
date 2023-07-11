@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- accordion -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- end accordion -->
+    <title>Ultratech Cost calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/style-main.css" />
+
+
+</head>
+
+<body onload="reset()">
+    <div class="hero-section">
+        <div class="cost-row">
+            <div class="col-md-6 first-col">
+                <div class="half-width">
+                    <h1 class="heading desktop">
+                        Home Construction <br>Cost Calculator
+                    </h1>
+                    <h1 class="heading mobile">
+                        Home Construction Cost Calculator
+                    </h1>
+                    <p class="subheding">
+                        Our home construction cost calculator is a free & effective tool designed to help you estimate
+                        the costs of bulding your home
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 second-col">
+                <!-- <img class="right-align" src="./assets/images/cost-banner1.png"> -->
+            </div>
+
+        </div>
+        <div class="row cost-calculator">
+            <h2 class="heading">
+                Cost Calculator
+            </h2>
+            <p class="sub-text">Calculate the estimated cost of construction in your location</p>
+        </div>
+        <form action="
+        ">
+            <div class="row border-0 calculator">
+
+                <div class="col-md-3 select-field">
+                    <label for="State" style="color: #777777;">Select State</label>
+                    <select class="form-select" id="inputState" name="state" required="required">
+                        <option value="SelectState">Select State</option>
+                        <option value="Andra Pradesh">Andra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madya Pradesh">Madya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Orissa">Orissa</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttaranchal">Uttaranchal</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadeep">Lakshadeep</option>
+                        <option value="Pondicherry">Pondicherry</option>
+                    </select>
+
+                    </optgroup>
+                </div>
+
+                <div class="col-md-3  select-field">
+                    <label for="inputCity" style="color: #777777;">Select City</label>
+                    <select id="inputCity" name="city" class="form-select" required>
+                        <!-- <optgroup label="Swedish Cars"> -->
+                        <option value="">Select City </option>
+                    </select>
+
+                    </optgroup>
+                </div>
+                <div class="col-md-2 col-6  select-field 0padding">
+                    <label for="area" style="color: #777777;">Area</label>
+                    <input class="form-select-input" type="number" id="area" name="area" placeholder="1000" required>
+                </div>
+                <div class="col-md-1 col-6 " style="margin-top: 40px;margin-left: 0px;">
+                    <div class="radio-buttons">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label class="radio-container"> sq.m</label>
+                    </div>
+
+                    <div class="radio-buttons">
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label class="radio-container">sq.feet</label>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <button class="cost-btn" onclick="handleRedirect()">
+                        <span>
+                            Calculate Cost
+                        </span>
+                        <img src="./assets/images/Path.png" alt="">
+                    </button>
+                </div>
+
+
+                <!-- <button class="cost-btn" id="costbtn" type="button">
+                        <span>Calculate Cost</span>
+                        <img src="./assets/images/Path.png">
+                    </button> -->
+
+
+            </div>
+        </form>
+
+        <div class="row use-calculator">
+            <div class="">
+                <h2 class="calculator-use-heading">
+                    How to Use House Construction Cost Calculator?
+                </h2>
+                <p class="calculator-para">
+                    Our House Construction Cost Calculator is exceptionally easy to use. These are the steps to
+                    follow<br>
+                    to calculate your estimated costs:<br>
+                    <!-- 1. Select the state in which your home will be located.<br>
+2. Select the city in which your home is being built.<br>
+3. Enter the area of construction in sq. feet or sq. metre<br>
+4. Tap ‘Next’<br>
+5. View your estimated total cost of construction and cost per square foot<br> -->
+                <ol>
+                    <li>
+                        Select the state in which your home will be located.
+                    </li>
+                    <li>
+                        Select the city in which your home is being built.
+                    </li>
+                    <li>
+                        Enter the area of construction in sq. feet or sq. metre
+                    </li>
+                    <li>
+                        Tap ‘Next’
+                    </li>
+                    <li>
+                        View your estimated total cost of construction and cost per square foot
+                    </li>
+                </ol>
+                </p>
+            </div>
+        </div>
+        <h2 class="calculator-heading">How to Use House Construction Cost Calculator?</h2>
+        <div class="row house-construction-cost">
+
+            <div class="col-md-6">
+                <img class="base-img" src="./assets/images/Base2.png" alt="Over Budgeting">
+                <h3 class="construction-heading">Over Budgeting</h3>
+                <p class="img-txt">To avoid overspending in construction projects, it's important to manage the process
+                    effectively. Hiring a construction manager & communicating effectively with contractors can help
+                    control costs. Requesting a breakdown of costs from a home building contractor & dealers can prevent
+                    inaccurate estimates. Planning ahead is also crucial to staying within budget.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img class="base-img" src="./assets/images/Base3.png" alt="Over Budgeting">
+                <h3 class="construction-heading">Saves Time and Money</h3>
+                <p class="img-txt">Having a budget is essential for a cost-effective & efficient home construction
+                    process. Proper planning & cost estimation enables you to stay within the budget & assess your home
+                    building process efficiency. A well-constructed budget helps to manage the project effectively and
+                    save time and money.
+                </p>
+            </div>
+        </div>
+        <div class="row conclusion">
+            <div class="col-md-7 conclusion">
+                <h3>Conclusion</h3>
+                <p>Disclaimer: The prices shown are estimates for each resource. Actual cost estimates for your region
+                    may differ. Please consult with your contractor or visit your nearest UBS branch for a customised
+                    cost estimate based on your specifications. This is only an estimate for the construction area and
+                    does not include the compound wall area.
+                    <br><br>
+                    To learn more about Home Construction Costs read more articles on budget for building a house
+                </p>
+            </div>
+            <div class="col-md-3 center-text">
+                <a class="learn-more" href="https://www.ultratechcement.com/home-building-explained/making-budget"><span
+                        class="more">Learn More </span><img class="svg-img" src="./assets/images/Path.png"></a>
+            </div>
+        </div>
+        <div class="row faq">
+            <h3 class="faq-heading">Frequently Asked Questions</h3>
+            <div class="accordion mt-5" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne" onclick="handleAccordionClick(event, 0)">
+                        <h4>
+                            <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">What costs the most when building a
+                                house?<i class="material-icons custom-icon">remove</i></a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p class="description">While the entire process of home building is expensive, the most
+                                expensive parts include framing and the cost of framing materials depending on the size
+                                of your home. A variety of factors also weigh into these costs, such as your location
+                                and the rates of contractors. By using our House Construction Cost Calculator you can be
+                                better prepared and budget in advance.
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo" onclick="handleAccordionClick(event, 1)">
+                        <h4>
+                            <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo"> Does construction cost include
+                                materials?<i class="material-icons custom-icon">add</i></a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p class="description">While the entire process of home building is expensive, the most
+                                expensive parts include framing and the cost of framing materials depending on the size
+                                of your home. A variety of factors also weigh into these costs, such as your location
+                                and the rates of contractors. By using our House Construction Cost Calculator you can be
+                                better prepared and budget in advance.
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree" onclick="handleAccordionClick(event, 2)">
+                        <h4>
+                            <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">What percentage of construction cost
+                                is labour cost?<i class="material-icons custom-icon">add</i></a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p class="description">While the entire process of home building is expensive, the most
+                                expensive parts include framing and the cost of framing materials depending on the size
+                                of your home. A variety of factors also weigh into these costs, such as your location
+                                and the rates of contractors. By using our House Construction Cost Calculator you can be
+                                better prepared and budget in advance.
+                        </div>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- page url -->
+    <!-- <script>
+    document.getElementById("costbtn").innerHTML = 
+    "The full URL of this page is:<br>" + window.location.href;
+    </script> -->
+    <!-- End page url -->
+    <script src="./city.js"></script>
+
+    <script>
+        let customIcon = document.querySelectorAll('.custom-icon');
+        function handleAccordionClick(event, index) {
+            console.log('first', customIcon)
+            customIcon.forEach((item, i) => {
+                if (index === i && item.innerText === 'remove') {
+                    item.innerText = 'add'
+                }
+                else if (index === i) {
+                    item.innerText = 'remove'
+                }
+                else {
+                    item.innerText = 'add'
+                }
+            })
+        }
+
+        function handleRedirect() {
+            let currentHref = window.location;
+            let domState = document.getElementById('inputState')
+            let domCity = document.getElementById('inputCity');
+            let selectedState = domState.options[domState.selectedIndex].value;
+            let selectedCity = domCity.options[domCity.selectedIndex].value;
+
+            if ((currentHref.pathname === '/' || currentHref.pathname == '/index.html') && selectedState !== 'SelectState') {
+                let newUrl = `${currentHref.origin}/result.html?state=${selectedCity}&city=${selectedState}`
+
+                window.location.href = newUrl
+            }
+        }
+
+        function reset() {
+            let domState = document.getElementById('inputState')
+            let domCity = document.getElementById('inputCity');
+            domState.selectedIndex = 0;
+            domCity.selectedIndex = 0
+        }
+
+    </script>
+
+</body>
+
+</html>
