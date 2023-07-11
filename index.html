@@ -123,7 +123,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 ">
-                    <button class="cost-btn" onclick="handleRedirect()">
+                    <!-- <button class="cost-btn" onclick="handleRedirect(e)"> -->
+                    <button class="cost-btn">
                         <span>
                             Calculate Cost
                         </span>
@@ -305,7 +306,8 @@
             })
         }
 
-        function handleRedirect() {
+        function handleRedirect(e) {
+            e.preventDefault()
             let currentHref = window.location;
             let domState = document.getElementById('inputState')
             let domCity = document.getElementById('inputCity');
@@ -326,6 +328,10 @@
             domState.selectedIndex = 0;
             domCity.selectedIndex = 0
         }
+
+        document.querySelector('.row .cost-btn').addEventListener('click', function (e) {
+            handleRedirect(e)
+        })
 
     </script>
 
