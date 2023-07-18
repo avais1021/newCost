@@ -316,7 +316,7 @@
             let formSelectInput = document.querySelector('.form-select-input');
             let radioButtonsInput = document.querySelector('.radio-buttons input');
 
-            if ((currentHref.pathname === '/' || currentHref.pathname == '/index.html' || currentHref.pathname == '/newCost/' ) && selectedState !== 'SelectState' && formSelectInput.value !== '' && radioButtonsInput.checked == true) {
+            if ((currentHref.pathname === '/' || currentHref.pathname == '/index.html' || currentHref.pathname == '/newCost/') && selectedState !== 'SelectState' && formSelectInput.value !== '' && radioButtonsInput.checked == true) {
                 // let newUrl = `${currentHref.origin}/result.html?state=${selectedCity}&city=${selectedState}`
                 let newUrl = `${currentHref.origin}/newCost/result.html?state=${selectedCity}&city=${selectedState}`
 
@@ -333,6 +333,22 @@
 
         document.querySelector('.row .cost-btn').addEventListener('click', function (e) {
             handleRedirect(e)
+        })
+
+        // --
+        let domState = document.getElementById('inputState')
+        let domCity = document.getElementById('inputCity');
+        let selectedState = domState.options[domState.selectedIndex].value;
+        let selectedCity = domCity.options[domCity.selectedIndex].value;
+        let formSelectInput = document.querySelector('.form-select-input');
+        let radioButtonsInput = document.querySelector('.radio-buttons input');
+        let costButton = document.querySelector('.row .cost-btn');
+
+        costButton.addEventListener('mouseover', () => {
+            if (selectedState !== 'Select State' && selectedCity !== 'Select City' && formSelectInput.value !== '' && radioButtonsInput.checked == true) {
+                costButton.style.cursor = 'pointer';
+                console.log('mouse over')
+            }
         })
 
     </script>
